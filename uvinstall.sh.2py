@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create project structure
+mkdir -p gemini_agent_system
+cd gemini_agent_system
+
+# Initialize uv project
+uv init
+
+# Add dependencies
+uv add google-generativeai asyncio pydantic python-dotenv
+
+echo "Project setup complete!"
